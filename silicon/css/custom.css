@@ -1,0 +1,27 @@
+.mega-dropdown-column {
+    /* 드롭다운 메뉴의 너비 */
+    min-width: 340px;
+}
+
+/* 기본: 60px 고정 */
+#tech-icons-container .icon-wrapper {
+  flex: 0 0 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 아이콘 개수 5개 이상일 때만 반응형 계산식 적용 */
+#tech-icons-container.responsive-icons .icon-wrapper {
+  flex: 0 0 calc(
+    (100% - (var(--icon-count) - 1) * var(--gap))
+    / var(--icon-count)
+  );
+}
+
+#tech-icons-container .tech-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
